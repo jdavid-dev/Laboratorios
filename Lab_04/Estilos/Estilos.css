@@ -1,0 +1,108 @@
+body {
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+header{
+    background: #3fc1be;
+    color: rgb(0, 62, 90);
+    padding: 10px 0;
+    border-radius: 10px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5)
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+    text-align: center;
+}
+
+nav ul li a{
+    color: #e4e4e4;
+    text-decoration: none;
+    text-align: center;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.form-input:focus {
+  border-color: #424cff;
+  outline: none;
+}
+
+.submit-button {
+  display: block; margin: 0 auto; width: 155px; margin-top: 5px;
+  padding: 10px 50px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3)
+}
+
+.submit-button:hover {
+  background-color: #a4a8b2;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+main {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+#video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Margen o espacio encima del video*/
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3)
+}
+
+#video iframe {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo del video */
+  height:  300px; /* Altura del video */
+  border-radius: 10px;
+  border: 3px solid #727272; /* Borde alrededor del video */
+}
+
+footer{
+    background: #3fc1be;
+    color: #fff;
+    text-align: center;
+    padding: px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  justify-content: center;
+}
