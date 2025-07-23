@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <header>
+    <img
+      src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.6435-9/187150373_4233876573290271_2314918802649381776_n.png?stp=dst-png_p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UYRa5RkzBokQ7kNvwGuOu5U&_nc_oc=AdmKqwKTbErXTL0TS01HBD2aYHlMSZmcZOdhyTDzfJKbux1oAasi13uHzyKeGv7Uzlg&_nc_zt=23&_nc_ht=scontent.fsjo3-1.fna&_nc_gid=KItpGoFL9WxHkoExOqBekQ&oh=00_AfPSIsGEChjCxje4xu9yFINTtntLKAFJtvWDHfiv5gNbcw&oe=687FDDCB"
+      width="300" height="300">
+  </header>
+  <main>
+    <form id="login" method="post">
+      <div class="form-group">
+        <div>
+          <label for="username">Usuario:</label>
+          <input class="form-input" type="text" id="username" name="username" required>
+        </div>
+        <div>
+          <label for="password">Contraseña:</label>
+          <input class="form-input" type="password" id="password" name="password" required>
+        </div>
+      </div>
+      <button type="submit" class="submit-button">Acceder</button>
+    </form>
+    <script>
+      document.getElementById("login").addEventListener("submit", function (e) {
+        e.preventDefault();
+        window.location.href = "Menu.html";
+      });
+    </script>
+  </main>
+</body>
+<footer>
+  <p>&copy; 2023 Plataforma Educativa Universidad Central</p>
+  <p>Asistencia: <a href="https://solicitudes.uc.ac.cr/">https://solicitudes.uc.ac.cr/</p>
+</footer>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #25405a;
+    margin: 10px;
+    padding: 20px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  main {
+    width: 50%;
+    color: white;
+    margin: auto;
+    margin-top: -5%;
+  }
+
+  .form-group {
+    padding: 20px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 80px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .submit-button {
+    background-color: #f66661;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+  }
+
+  .submit-button:hover {
+    background-color: #ac4744;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #ffffff;
+  }
+</style>
+
+</html>
