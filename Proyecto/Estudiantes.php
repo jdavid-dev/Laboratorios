@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Estilos.css">
-  <title>Datos de cursos</title>
+  <title>Datos de estudiantes</title>
 </head>
 <header>
-  <h1>Cursos</h1>
+  <h1>Estudiantes</h1>
 </header>
 
 <body>
@@ -25,27 +25,22 @@
       <th>ID</th>
       <th>Nombre</th>
       <th>Correo</th>
-      <th>Curso</th>
-      <th>Modalidad</th>
     </tr>
   </thead>
   </fieldset>
   <tbody>
   <?php
-    $stmt = $pdo->query("SELECT * FROM registro_c ORDER BY id DESC");
+    $stmt = $pdo->query("SELECT * FROM registro_e ORDER BY id DESC");
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
       echo "<tr>
               <td>{$row['id']}</td>
               <td>".htmlspecialchars($row['nombre'])."</td>
               <td>".htmlspecialchars($row['correo'])."</td>
-              <td>".htmlspecialchars($row['curso'])."</td>
-              <td>".htmlspecialchars($row['modalidad'])."</td>
             </tr>";
     }
   ?>
 </tbody>
 </table>
-
     </main>
 </body>
 <footer>
