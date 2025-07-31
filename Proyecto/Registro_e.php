@@ -18,7 +18,7 @@
     </ul>
   </nav>
   <main>
-    <form action="procesar2.php" method="POST">
+    <form action="procesar_e.php" method="POST">
         <div class="form-group">
           <div>
             <label for="id">Identificación:</label>
