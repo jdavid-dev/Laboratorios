@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Ejemplo Base - JavaScript Interactivo</title>
+
+</head>
+
+<body>
+
+    <h2>Canvas1</h2>
+    <canvas id="canvasArea" width="300" height="200"></canvas><br>
+    <button onclick="draw()">Dibujar círculo</button>
+
+    <h2>Canvas2</h2>
+    <canvas id="canvasArea2" width="300" height="200"></canvas><br>
+    <button onclick="draw2()">Dibujar rectángulo</button>
+
+    <h2>Canvas3</h2>
+    <canvas id="canvasArea3" width="300" height="200"></canvas><br>
+    <button onclick="draw3()">Dibujar triángulo</button>
+
+    <h2>Drag and Drop</h2>
+    <div id="drag1" draggable="true" ondragstart="drag(event)"
+        style="width:100px;height:100px;background-color:#3498db;color:#fff;text-align:center;line-height:100px;cursor:move;">
+        Arrástrame
+    </div>
+    <div id="drop1" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">Caja 1</div>
+    <div id="drop2" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">Caja 2</div>
+    <div id="drop3" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">Caja 3</div>
+
+    <h2>Lectura de Archivos</h2>
+    <input type="file" onchange="previewFile(event)">
+    <img id="preview" class="preview" src="">
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

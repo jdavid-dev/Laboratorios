@@ -1,0 +1,25 @@
+.caja {
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.caja.color {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  font-weight: bold;
+}
+
+.oscuro {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+#tema {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#tema:hover {
+  color: #0077b6;
+}

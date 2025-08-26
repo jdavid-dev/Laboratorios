@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Tipo de usuario</title>
+</head>
+<header>
+    <h1>Seleccione su tipo de usuario</h1>
+</header>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Regresar</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="botones-container">
+            <button class="user-button" onclick="location.href='Registro_p.php'">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Profesor</span>
+            </button>
+            <button class="user-button" onclick="location.href='Registro_e.php'">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Estudiante</span>
+            </button>
+        </div>
+    </main>
+</body>
+
+<footer>
+    <p>&copy; 2023 Plataforma Educativa Universidad Central</p>
+</footer>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #25405a;
+        margin: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        background-color: #f66661;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 10%;
+        margin-top: -58px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul:hover {
+        color: #f66661;
+        background-color: #f9625dff;
+        padding: 15px 15px;
+        border-radius: 5px;
+    }
+
+
+    nav ul li a {
+        color: #e4e4e4;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #25405a;
+        background-color: #f66661;
+        padding: 10px 5px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .botones-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .user-button {
+        background-color: #f66661;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 30px 40px;
+        font-size: 22px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .user-button:hover {
+        transform: scale(1.05);
+        background-color: #fa7b76;
+    }
+
+    .user-button i {
+        font-size: 40px;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 150px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+    }
+</style>
+
+</html>
