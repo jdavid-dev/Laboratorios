@@ -10,6 +10,7 @@ if ($search !== '') {
                 OR correo    LIKE :s
                 OR curso     LIKE :s
                 OR modalidad LIKE :s
+                OR id        LIKE :s
              ORDER BY id DESC";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':s' => "%{$search}%"]);

@@ -113,7 +113,6 @@
 
   .form-input {
     margin: 3px 0;
-    box-sizing: border-box;
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;

@@ -8,6 +8,7 @@ if ($search !== '') {
              FROM registro_e 
              WHERE nombre    LIKE :s
                 OR correo    LIKE :s
+                OR id        LIKE :s
              ORDER BY id DESC";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':s' => "%{$search}%"]);
