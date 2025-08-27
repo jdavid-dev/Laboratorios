@@ -1,4 +1,21 @@
-<?php include 'db.php'; ?>
+<?php
+include 'db.php';
+
+$search = trim($_GET['search'] ?? '');
+
+if ($search !== '') {
+    $sql  = "SELECT * 
+             FROM registro_e 
+             WHERE nombre    LIKE :s
+                OR correo    LIKE :s
+             ORDER BY id DESC";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([':s' => "%{$search}%"]);
+} else {
+    $stmt = $pdo->query("SELECT * FROM registro_e ORDER BY id DESC");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,6 +38,23 @@
   </nav>
 
   <main>
+
+    <div class="search-container">
+      <form method="GET" action="">
+        <input
+          type="text"
+          name="search"
+          placeholder="Buscar"
+          value="<?= htmlspecialchars($search, ENT_QUOTES) ?>"
+        >
+        <button type="submit">Buscar</button>
+      </form>
+
+      <?php if ($search !== ''): ?>
+        <a href="Estudiantes.php" class="reset">Mostrar todos</a>
+      <?php endif; ?>
+    </div>
+
     <fieldset>
       <table>
         <thead>
@@ -32,23 +66,29 @@
           </tr>
         </thead>
         <tbody>
-          <?php
-            $stmt = $pdo->query("SELECT * FROM registro_e ORDER BY id DESC");
-            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              echo "<tr>
-                      <td>{$row['id']}</td>
-                      <td>".htmlspecialchars($row['nombre'])."</td>
-                      <td>".htmlspecialchars($row['correo'])."</td>
-                      <td>
-                        <a href=\"EditarE.php?id={$row['id']}\">Editar</a> |
-                        <a href=\"EliminarE.php?id={$row['id']}\" 
-                           onclick=\"return confirm('¿Deseas eliminar este registro? Esta opción solo se muestra para los administradores')\">
-                          Eliminar
-                        </a>
-                      </td>
-                    </tr>";
-            }
-          ?>
+          <?php if ($stmt->rowCount()): ?>
+            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+              <tr>
+                <td><?= $row['id'] ?></td>
+                <td><?= htmlspecialchars($row['nombre'], ENT_QUOTES) ?></td>
+                <td><?= htmlspecialchars($row['correo'], ENT_QUOTES) ?></td>
+                <td>
+                  <a href="EditarE.php?id=<?= $row['id'] ?>">Editar</a> |
+                  <a href="EliminarE.php?id=<?= $row['id'] ?>"
+                    onclick="return confirm('¿Deseas eliminar este registro?')">
+                    Eliminar
+                  </a>
+                </td>
+              </tr>
+            <?php endwhile; ?>
+          <?php else: ?>
+            <tr>
+              <td colspan="4">
+                No se encontraron registros
+                <?= $search !== '' ? " para «".htmlspecialchars($search, ENT_QUOTES)."»" : "" ?>.
+              </td>
+            </tr>
+          <?php endif; ?>
         </tbody>
       </table>
     </fieldset>
@@ -59,3 +99,37 @@
   </footer>
 </body>
 </html>
+
+  <style>
+    .search-container {
+      margin-left : 75%;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .search-container input {
+      flex: 1;
+      padding: 0.4rem;
+      border-radius: 10px;
+    }
+    .search-container button,
+    .search-container .reset {
+      padding: 0.4rem 0.8rem;
+      background: #f66661;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .search-container button:hover,
+    .search-container .reset:hover {
+      background-color: #003150;
+      color: #f66661;
+    }
+
+    .search-container .reset {
+      background: #f66661;
+      line-height: 1.6;
+    }
+  </style>

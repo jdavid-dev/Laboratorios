@@ -14,7 +14,7 @@
 
   <nav>
     <ul>
-      <li><a href="index.html">Regresar</a></li>
+      <li><a href="Eleccion.html">Regresar</a></li>
     </ul>
   </nav>
   <main>
@@ -37,7 +37,7 @@
             <input class="form-input" type="password" id="password" name="password" required>
           </div>
         </div>
-        <button type="submit" class="submit-button">Registrar</button>
+        <button type="submit" class="submit-button">Guardar</button>
     </form>
 
     <section id="video">
@@ -141,17 +141,22 @@
 
   .submit-button {
     display: block;
-    margin: 0 auto;
+    margin-bottom: 10px;
     width: 155px;
-    margin-top: 5px;
-    padding: 10px 50px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3)
+    margin-top: 15px;
+    padding: 10px 10px;
+    background-color: #f66661;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
   }
 
   .submit-button:hover {
-    background-color: #a4a8b2;
+    background-color: #1b5891ff;
+    color: #f66661;
+    font-weight: bold;
   }
 
   #video {

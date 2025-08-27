@@ -69,8 +69,8 @@
               <label for="mod3">Virtual</label>
           </fieldset>
         </div>
-        <button type="submit" class="submit-button">Registrar</button>
       </fieldset>
+      <button type="submit" class="submit-button">Registrar</button>
     </form>
 
   </main>
@@ -176,17 +176,23 @@
 
   .submit-button {
     display: block;
-    margin: 0 auto;
+    margin-bottom: 10px;
     width: 155px;
-    margin-top: 5px;
-    padding: 10px 50px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3)
+    margin-top: 15px;
+    padding: 10px 10px;
+    background-color: #f66661;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+
   }
 
   .submit-button:hover {
-    background-color: #a4a8b2;
+    background-color: #003150;
+    color: #f66661;
   }
 
   #video {

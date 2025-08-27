@@ -51,18 +51,18 @@ if (isset($_GET['id'])) {
   <form action="EditarC.php?id=<?php echo $row['id']; ?>" method="POST">
     <label>
       Nombre:<br>
-      <input type="text" name="nombre" 
+      <input class="form-input" type="text" name="nombre" 
              value="<?php echo htmlspecialchars($row['nombre']); ?>" required>
     </label><br><br>
 
     <label>
       Correo:<br>
-      <input type="email" name="correo" 
+      <input class="form-input" type="email" name="correo" 
              value="<?php echo htmlspecialchars($row['correo']); ?>" required>
     </label><br><br>
     <label>
       Contraseña:<br>
-      <input type="password" name="contraseña" required>
+      <input class="form-input" type="password" name="contraseña" required>
     </label><br><br>
 
     <div class="flex-container">
@@ -106,6 +106,14 @@ if (isset($_GET['id'])) {
   </div>
 </body>
 </main>
+
+<section id="video">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/7YGcHb9LC_U" title="La vida no te califica, pero la Universidad Central te prepara para ella 💪🏼" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+<footer>
+  <p>&copy; 2023 Plataforma Educativa Universidad Central</p>
+</footer>
+
 </html>
 
 <style>
@@ -133,6 +141,7 @@ if (isset($_GET['id'])) {
   .form-input {
     box-sizing: border-box;
     width: 100%;
+    margin-right: 70px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -176,6 +185,7 @@ if (isset($_GET['id'])) {
 
   .submit-button:hover {
     background-color: #003150;
+    color: #f66661;
   }
 
   #video {
@@ -192,4 +202,15 @@ if (isset($_GET['id'])) {
   height:  400px;
   border-radius: 10px;
 }
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #000000;
+  }
 </style>
