@@ -52,6 +52,12 @@
 </footer>
 <style>
 
+  main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   body {
     font-family: Arial, sans-serif;
     background-color: #25405a;

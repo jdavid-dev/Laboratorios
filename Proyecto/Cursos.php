@@ -27,6 +27,7 @@
       <th>Correo</th>
       <th>Curso</th>
       <th>Modalidad</th>
+      <th>Acciones</th>
     </tr>
   </thead>
   </fieldset>
@@ -40,6 +41,13 @@
               <td>".htmlspecialchars($row['correo'])."</td>
               <td>".htmlspecialchars($row['curso'])."</td>
               <td>".htmlspecialchars($row['modalidad'])."</td>
+              <td>
+                <a href=\"EditarC.php?id={$row['id']}\">Editar</a> |
+                <a href=\"EliminarC.php?id={$row['id']}\" 
+                   onclick=\"return confirm('¿Deseas eliminar este registro? Esta opción solo se muestra para los administradores')\">
+                  Eliminar
+                </a>
+              </td>
             </tr>";
     }
   ?>

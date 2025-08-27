@@ -26,6 +26,7 @@
       <th>Nombre</th>
       <th>Correo</th>
       <th>Asignatura</th>
+      <th>Acciones</th>
     </tr>
   </thead>
   </fieldset>
@@ -38,6 +39,13 @@
               <td>".htmlspecialchars($row['nombre'])."</td>
               <td>".htmlspecialchars($row['correo'])."</td>
               <td>".htmlspecialchars($row['asignatura'])."</td>
+              <td>
+                <a href=\"EditarP.php?id={$row['id']}\">Editar</a> |
+                <a href=\"EliminarP.php?id={$row['id']}\" 
+                   onclick=\"return confirm('¿Deseas eliminar este registro? Esta opción solo se muestra para los administradores')\">
+                  Eliminar
+                </a>
+              </td>
             </tr>";
     }
   ?>

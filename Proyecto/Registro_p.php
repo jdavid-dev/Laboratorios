@@ -71,6 +71,12 @@
 </footer>
 <style>
 
+  main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   body {
     font-family: Arial, sans-serif;
     background-color: #25405a;
@@ -126,7 +132,6 @@
 
   .form-input {
     margin: 3px 0;
-    box-sizing: border-box;
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;

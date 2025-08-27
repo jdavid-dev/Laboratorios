@@ -82,6 +82,13 @@
   <p>&copy; 2023 Plataforma Educativa Universidad Central</p>
 </footer>
 <style>
+
+  main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   body {
     font-family: Arial, sans-serif;
     background-color: #dcdcdc;
@@ -154,7 +161,7 @@
   }
 
   main {
-    width: 80%;
+    width: 40%;
     margin: auto;
     padding: 20px;
     margin-top: 10px;

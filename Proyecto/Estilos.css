@@ -72,6 +72,11 @@
     font-family: Arial black, sans-serif;
   }
 
+  footer p1 {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+  }
 
   footer {
     text-align: center;
