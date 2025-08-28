@@ -31,8 +31,6 @@ if (isset($_GET['id'])) {
     if (!$row) {
       exit("Registro no encontrado.");
     }
-} else {
-    exit("Falta el ID.");
 }
 ?>
 
