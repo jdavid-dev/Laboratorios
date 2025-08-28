@@ -70,7 +70,7 @@ if (isset($_GET['id'])) {
             <div class="form-group">
               <label for="curso">
                 <select class="form-control" id="curso" name="curso" 
-                 value="<?php echo htmlspecialchars($row['correo']); ?>" required>
+                 value="<?php echo htmlspecialchars($row['curso']); ?>" required>
                   <option>Matemática I | Miércoles 6:30 PM - 9:30 PM</option>
                   <option>Programación III | Martes 6:30 PM - 9:30 PM</option>
                   <option>Base de Datos II | Jueves 6:30 PM - 9:30 PM</option>

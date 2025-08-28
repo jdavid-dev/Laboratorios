@@ -62,7 +62,7 @@ if (isset($_GET['id'])) {
       <input class="form-input" type="password" name="contraseña" required>
     </label><br><br>
 
-    <button class="submit-button" type="submit">Guardar Cambios</button>
+    <button class="submit-button" type="submit">Guardar cambios</button>
     <a href="Estudiantes.php">Cancelar</a>
   </form>
   </div>

@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
             </div>
           </div>
 
-    <button class="submit-button" type="submit">Guardar Cambios</button>
+    <button class="submit-button" type="submit">Guardar cambios</button>
     <a href="Profesores.php">Cancelar</a>
   </form>
   </div>

@@ -23,7 +23,7 @@ if ($search !== '') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Estilos.css">
+  <link rel="stylesheet" href="Style.css">
   <title>Datos de estudiantes</title>
 </head>
 
@@ -74,9 +74,9 @@ if ($search !== '') {
                 <td><?= htmlspecialchars($row['nombre'], ENT_QUOTES) ?></td>
                 <td><?= htmlspecialchars($row['correo'], ENT_QUOTES) ?></td>
                 <td>
-                  <a href="EditarE.php?id=<?= $row['id'] ?>">Editar</a> |
-                  <a href="EliminarE.php?id=<?= $row['id'] ?>"
-                    onclick="return confirm('¿Deseas eliminar este registro?')">
+                  <a href="EditarE.php?id=<?= $row['id'] ?>" class="btn-1">Editar</a> |
+                  <a href="EliminarE.php?id=<?= $row['id'] ?>" class="btn-2"
+                    onclick="return confirm('¿Deseas eliminar este registro? Esta opción solo está disponible para administradores.')">
                     Eliminar
                   </a>
                 </td>
@@ -100,37 +100,3 @@ if ($search !== '') {
   </footer>
 </body>
 </html>
-
-  <style>
-    .search-container {
-      margin-left : 75%;
-      display: flex;
-      gap: 0.5rem;
-    }
-    .search-container input {
-      flex: 1;
-      padding: 0.4rem;
-      border-radius: 10px;
-    }
-    .search-container button,
-    .search-container .reset {
-      padding: 0.4rem 0.8rem;
-      background: #f66661;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .search-container button:hover,
-    .search-container .reset:hover {
-      background-color: #003150;
-      color: #f66661;
-    }
-
-    .search-container .reset {
-      background: #f66661;
-      line-height: 1.6;
-    }
-  </style>
